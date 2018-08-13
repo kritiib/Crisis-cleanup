@@ -47,3 +47,5 @@ Thumbs.db
 # Project files
 /assets/fonts/icomoon/libs
 /resources
+
+package-lock.json
