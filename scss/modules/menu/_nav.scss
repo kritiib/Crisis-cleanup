@@ -1,0 +1,155 @@
+/**
+ * Navigation module
+ */
+
+/* =============== Site Sidebar Navigation ================ */
+
+#sidebarNavigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: pxToRem(22, 16) pxToRem(30, 16);
+  background: $brand-dark-faded;
+  width: pxToRem(260, 16);
+
+  &::after {
+    @include make-pseudo-position(fixed, full);
+    right: auto;
+    z-index: $zindex-neg;
+    background: inherit;
+    width: pxToRem(540, 16);
+  }
+}
+
+/* =============== Navbar items ================ */
+
+.navbar {
+  margin: pxToRem(45, 16) 0;
+}
+
+.navbar-nav__item {
+  line-height: 1.3;
+
+  &:not(:last-of-type) {
+    margin-bottom: pxToRem(18, 16);
+  }
+
+  &:hover,
+  &.is-active {
+    .navbar-nav__link {
+      &::after {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.navbar-nav__link {
+  position: relative;
+  z-index: $zindex-normal;
+  display: inline-block;
+  color: $brand-black;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    right: pxToRem(-25, 16);
+    bottom: 0;
+    z-index: $zindex-neg;
+    opacity: 0;
+    pointer-events: none;
+    content: "";
+    background: $primary;
+    height: pxToRem(16, 16);
+    width: pxToRem(30, 16);
+    transform: translateX(-15px);
+    transition: all ease 0.35s;
+  }
+
+  &:hover {
+    color: $brand-black;
+  }
+}
+
+/* =============== Navbar submenu items ================ */
+
+.navbar-submenu {
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  padding-left: pxToRem(50, 16);
+  max-height: 0;
+  transform: translateX(-10px);
+  transition: all cubic-bezier(0.43, 0.15, 0.87, 0.77) 0.35s;
+
+  .is-active & {
+    pointer-events: auto;
+    opacity: 1;
+    max-height: 500px;
+    margin-bottom: pxToRem(35, 16);
+    transform: translateX(0);
+  }
+}
+
+.navbar-submenu__item {
+  margin-bottom: pxToRem(10, 16);
+}
+
+.navbar-submenu__item--heading {
+  position: relative;
+  margin: pxToRem(17, 16) 0 pxToRem(22, 16);
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: pxToRem(-80, 16);
+    content: "";
+    margin-top: -1px;
+    background: $brand-black;
+    height: 1px;
+    width: pxToRem(65, 16);
+  }
+}
+
+.navbar-submenu__link {
+  opacity: 0.6;
+  color: $brand-black;
+  font-size: pxToRem(14, 16);
+  font-weight: 500;
+  text-transform: capitalize;
+
+  &:hover {
+    opacity: 1;
+    color: $brand-black;
+  }
+}
+
+.is-submenu-shown {
+  .navbar-nav__link {
+    opacity: 0.6;
+  }
+}
+
+.is-submenu-shown .is-active {
+  .navbar-nav__link {
+    opacity: 1;
+  }
+}
+
+/* =============== Nav-Sidebar footer ================ */
+
+.nav-sidebar-label {
+  margin-bottom: pxToRem(17, 16);
+  font-size: pxToRem(14, 16);
+}
+
+/* =============== Hamburg linebars for responsive menu ================ */
+.hamburg-header {
+  position: fixed;
+  right: pxToRem(15, 14);
+}

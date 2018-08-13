@@ -1,0 +1,92 @@
+/**
+ * Linebars - Hamburg UI
+ */
+
+$enable_line_sm: false !default;
+$enable_line_xs: false !default;
+
+// Close line bars
+.line-bars {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  // background-color: $brand-primary;
+  height: pxToRem(30, 14);
+  width: pxToRem(50, 14);
+
+  @if $enable_line_sm == true {
+    &.is-sm {
+      height: pxToRem(24, 14);
+      width: pxToRem(24, 14);
+
+      .line-bar {
+        top: 11px !important;
+        margin-left: -13px;
+        width: 25px;
+      }
+    }
+  }
+
+  @if $enable_line_sm == true {
+    &.is-xs {
+      height: 15px;
+      width: 15px;
+
+      .line-bar {
+        top: 7px !important;
+        margin-left: -7px;
+        height: 2px;
+        width: 15px;
+      }
+    }
+  }
+
+  // Line bars
+  .line-bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    opacity: 1;
+    margin-left: pxToRem(-15, 14);
+    background: $brand-primary;
+    border-radius: pxToRem(2, 14);
+    height: 3px;
+    width: 30px;
+    transform: rotate(0deg);
+    @include transition(all $transition_delay_default ceaser($easeInOutSine));
+
+    &:nth-child(1) {
+      top: 25px;
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      top: 34px;
+    }
+
+    &:nth-child(4) {
+      top: 43px;
+    }
+
+    .menu-holder & {
+      background: $brand-black;
+    }
+  }
+
+  // == Humburger menu opened
+  &.expanded .line-bar {
+    &:nth-child(1), &:nth-child(4) {
+      top: 29px; //~18px;
+      left: 50%;
+      opacity: 0;
+      width: 0%;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}

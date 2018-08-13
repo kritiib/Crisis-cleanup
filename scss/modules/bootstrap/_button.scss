@@ -1,0 +1,67 @@
+/**
+* Bootstrap overrides button scss file
+*/
+
+.btn {
+  display: inline-block;
+  padding: 14px 15px;
+  border: 0;
+  color: $brand-black;
+  font-weight: 600;
+  line-height: 1;
+  min-width: pxToRem(175, 16);
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+
+  &:hover {
+    color: $brand-black;
+  }
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    box-shadow: none !important;
+    color: $brand-black !important;
+  }
+}
+
+.btn-primary {
+  background: $primary;
+  &:hover {
+    background: $secondary !important;
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid $brand-dark;
+  color: $brand-dark;
+
+  &:hover {
+    background: $brand-dark;
+    color: $primary;
+  }
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    background: $brand-dark;
+    color: $primary;
+  }
+}
+
+// == Button group vertical
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+
+  .btn {
+    &:not(:last-of-type) {
+      margin-bottom: pxToRem(10, 16);
+    }
+  }
+}

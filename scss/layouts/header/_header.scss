@@ -1,0 +1,30 @@
+/**
+* @partial: _header.scss
+*/
+
+/* =============== Navbar ================ */
+
+
+/* =============== Navbar Brand ================ */
+
+/* =============== Sticky call to action ================ */
+
+.sticky-call-action-holder {
+  position: fixed;
+  top: pxToRem(20, 16);
+  right: 15px;
+}
+
+.sticky-call-action__btn {
+  &.btn {
+    background: #ffb600;
+    padding-right: pxToRem(13, 16);
+    padding-left: pxToRem(13, 16);
+  }
+
+  .text-lg {
+    display: block;
+    margin-bottom: 5px;
+    font-size: pxToRem(20, 16);
+  }
+}

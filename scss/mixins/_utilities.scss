@@ -1,0 +1,78 @@
+/* Build mixin for selection feature */
+$prefixes: ("-moz-", "");
+@mixin selection($bkg: $color-primary, $color: $color-white) {
+  @each $prefix in $prefixes {
+    ::#{$prefix}selection {
+      background: $bkg;
+      color: $color;
+    }
+  }
+}
+
+/* Build mixin for form element's placeholders */
+@mixin placeholder($selector, $color, $font-size, $font-family, $case) {
+  #{$selector}::-webkit-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+    text-transform: $case;
+  }
+  #{$selector}::-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+    text-transform: $case;
+  }
+  #{$selector}:-ms-input-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+    text-transform: $case;
+  }
+  #{$selector}:-moz-placeholder {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+    text-transform: $case;
+  }
+}
+
+/* Make absolutely positioned element mixin */
+
+@mixin make-pseudo-position($pos, $full) {
+  position: $pos;
+  content: "";
+  @if $full == "full" {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  @content;
+}
+
+@mixin make-full-position($pos) {
+  position: $pos;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @content;
+}
+
+/* Make mixin for background image properties */
+@mixin make-bkg-image($repeat: no-repeat, $position: center center, $size: cover) {
+  background: {
+    repeat: $repeat;
+    position: $position;
+    size: $size;
+  };
+  @content;
+}
+
+// Debug style
+@mixin debug($color:$color-primary){
+  &, & *{
+     outline: 1px solid $color;
+  }
+}

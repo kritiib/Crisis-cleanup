@@ -1,0 +1,41 @@
+/*
+** @partial: _older-browser-fixes.scss
+*/
+
+/* =============== IE older browser target ================ */
+
+.ie-older-browser-message {
+	@include make-full-position(fixed);
+	z-index: 999999;
+	background-color: $danger;
+	width: 100%;
+	text-align: center;
+
+	/* IE message text */
+	.ie-message-text {		
+		display: inline-block;
+		padding: 50px 50px;
+		color: $brand-white;
+		width: 1200px;
+		text-align: center;
+
+		> p {
+			@extend h1, .m-0 !optional;
+
+			> a {
+				color: $brand-white;
+				border-bottom: 2px solid;
+
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+	}
+}
+
+.msie-9-below {
+	.page-outer {
+		display: none;
+	}
+}

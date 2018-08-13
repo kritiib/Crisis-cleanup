@@ -1,0 +1,19 @@
+/**
+ * Typography related styles
+ */
+
+/* =============== Typography related styles ================ */
+
+// stylelint-disable font-weight-notation
+b,
+strong {
+  font-weight: 900; // Add the correct font weight in Chrome, Edge, and Safari
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+p, blockquote {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

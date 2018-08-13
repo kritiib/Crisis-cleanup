@@ -1,0 +1,43 @@
+/*
+** @partial: _type.scss @mixin
+*/
+
+// == Mixin to make font families
+@mixin make_font_families($list, $val) {
+	// Counter initializes to 1
+	$i: 1;
+
+	// Looping each item through each loop
+	@each $l in $list {
+		// Catch each item in list passed as first argument
+		.ff-#{$l} {
+			font-family: nth($val, $i);
+		}
+
+		// Incrementing counter
+		$i: $i + 1;
+
+		// Below line of statement allows to append code later where the mixin is executed
+		@content;
+	} 
+}
+
+// == Mixin to make type weights
+@mixin make_font_weights($list, $val) {
+	// Counter initializes to 1
+	$i: 1;
+
+	// Looping each item through each loop
+	@each $l in $list {
+		// Catch each item in list passed as first argument
+		.fw-#{$l} {
+			font-weight: nth($val, $i) !important;
+		}
+
+		// Incrementing counter
+		$i: $i + 1;
+
+		// Below line of statement allows to append code later where the mixin is executed
+		@content;
+	}
+}

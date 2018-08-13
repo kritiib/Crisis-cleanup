@@ -1,0 +1,218 @@
+/*
+** Variables collection
+*/
+
+/* =============== SASS Variables ================ */
+
+// == PATH VARIABLES
+$img_path: '../images/';
+$content: '../../contents/';
+$svg_path: '../svg/';
+$font_path: '../fonts/icomoon/';
+
+// == Z-index stack utilities
+$zindex-neg: -1;
+$zindex-low: 0;
+$zindex-normal: 1;
+$zindex-high: 2;
+$zindex-super: 9999;
+
+/**
+* ==============================================================================
+*     Overriding bootstrap's varaibles with own brand's variables
+* ==============================================================================
+*/
+
+//== Colors
+//
+//## Brand colors for use across Bootstrap.
+
+$primary: #fece09;
+$secondary: #fee682; //~#091f35;
+$success: #3498db;
+$info: #17a2b8;
+$warning: #f39c12;
+$danger: #c0392b; //~#FB0F01;
+$brand-white: #ffffff;
+$brand-dark: #353535;
+$brand-black: #2d2d2d;
+$brand-gray: #616161;
+$brand-light-gray: #7d7d7d;
+$brand-faded: #fafafa;
+$brand-dark-faded: #F7F7F7;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg: $brand-white;
+$body-color: #4c4c4d;
+;
+//** Global text color on `<body>`.
+$text-color: $brand-black;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-primary;
+$font-family-std-base: $font-family-secondary;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+// $small-font-size:    86.6025%;
+$font-size-base: pxToRem(16, 16); //~16px;
+$font-size-lg: pxToRem(20, 16);
+$small-font-size: pxToRem(12, 16);
+
+$h1-font-size: pxToRem(54, 16);
+$h2-font-size: pxToRem(40, 16);
+$h3-font-size: pxToRem(32, 16);
+$h4-font-size: pxToRem(22, 16);
+$h5-font-size: pxToRem(22, 16);
+$h6-font-size: pxToRem(16, 16);
+
+$font-size-sm: pxToRem(12, 16);
+
+$headings-line-height: 1.3;
+$line-height-base: 1.63;
+$headings-margin-bottom: pxToRem(20, 16);
+
+//** Unit-less `line-height` for use in components like buttons.
+// $line-height-base:        1.25; // 20/14
+
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+$headings-font-weight: 600;
+$headings-font-family: $font-family-base;
+
+//** Headings small color
+$headings-small-color: $brand-black;
+
+//** Global textual link color.
+$link-color: $success;
+//** Link hover color set via `darken()` function.
+$link-hover-color: darken($link-color, 15%);
+//** Link hover decoration.
+$link-hover-decoration: none;
+
+//** Text muted color
+$text-muted: $brand-gray;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 1024px,
+  lg: 1200px,
+  xl: 1440px
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-xs-max-width: 1170px;
+
+$container-max-widths: (
+  xs: $container-xs-max-width,
+);
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-radius: .25rem;
+$border-radius-lg: .375rem;
+$border-radius-sm: .125rem;
+
+// Navbar
+$navbar-light-color: #6b6b6b;
+
+// == Buttons
+
+$btn-padding-y: 0.938rem;
+$btn-padding-x: 0.938rem;
+$btn-padding-x-sm: 1.5rem; //0.625rem;
+$btn-padding-y-sm: 0.5633rem;
+$btn-padding-x-lg: 3.43066rem;
+$btn-border-radius: 2px;
+$btn-font-weight: 600;
+$btn-line-height: 1;
+$btn-border-radius-lg: 2px;
+$btn-border-radius-sm: 2px;
+
+$btn-secondary-bg: $secondary;
+$btn-secondary-color: $brand-white;
+$btn-secondary-border: $secondary;
+$btn-font-weight: 400;
+
+// == Dropdowns
+$dropdown-min-width: 100%;
+$dropdown-margin-top: 0;
+$border-radius: 4px;
+$dropdown-padding-y: 0;
+$dropdown-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.01), 0 5px 32px 10px rgba(0, 0, 0, 0.05);
+$dropdown-item-padding-x: 1.375rem;
+$dropdown-link-active-bg: #f7f7f7;
+$dropdown-link-active-color: $brand-black;
+$dropdown-border-color: #e0e0e0;
+$dropdown-link-hover-bg: $brand-faded;
+
+// == Form fields
+$form-group-margin-bottom: 1.5rem;
+$input-border-color: #e0e0e0;
+$input-border-focus: $input-border-color;
+$input-border-radius: 4px;
+$input-border-radius-sm: 2px;
+$input-padding-y-sm: 0.406777rem;
+$input-padding-x-sm: 0.938rem;
+$input-padding-y: 0.813rem;
+$input-padding-x: 1rem;
+$input-padding-y-lg: 0.813rem; //~0.938rem;
+$input-padding-x-lg: 1rem;
+$input-border-radius-lg: 4px;
+
+// == Modal
+$modal-header-padding: 1.5rem;
+$modal-md: 555px;
+$close-color: rgba(0, 0, 0, 0.54);
+$modal-header-border-width: 1px;
+$modal-inner-padding: null;
+$border-radius-lg: 4px;
+$modal-dialog-margin: 0.938rem;
+
+$modal-lg: inherit;
+$modal-md: inherit;
+$modal-sm: inherit;
+$modal-content-border-width: 0;
+
+// == Close
+$close-font-size: 2rem;
+$close-font-weight: 400;
+
+// == Progressbar
+$progress-bar-bg: $danger;
+
+// == Tooltips
+$tooltip-bg: #000000;
+$tooltip-arrow-color: #000000;
+
+$shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.25);
+
+$spacer: 1.5rem;
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-shadows: true;
+$enable-rounded: false;

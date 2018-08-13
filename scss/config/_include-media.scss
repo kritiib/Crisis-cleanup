@@ -1,0 +1,25 @@
+/*
+** @partial: _include-media.scss
+*/
+
+/* =============== Include media breakpoints configuration ================ */
+
+$breakpoints: (
+  'xs' : 480px,
+  'xmd': 567px,
+  'sm': 768px,
+  'ipad': 1024px,
+  'ls': 1280px,
+  'ds' : 1440px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);

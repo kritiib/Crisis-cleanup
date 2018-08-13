@@ -1,0 +1,14 @@
+/*
+** Layout module
+*/
+
+/* =============== Layout related styles ================ */
+
+.page-outer {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: pxToRem(108, 16);
+  padding-bottom: pxToRem(104, 16);
+  min-height: 100%;
+  max-width: 1280px;
+}

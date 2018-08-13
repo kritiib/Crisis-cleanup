@@ -1,0 +1,9 @@
+/**
+ * Project specific SASS functions
+ */
+
+/* =============== SASS Functions ================ */
+
+@function pxToRem($input, $default: 16px) {
+  @return ($input / $default) * 1rem;
+}

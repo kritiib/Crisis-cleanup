@@ -1,0 +1,39 @@
+/**
+ * Lists module
+ */
+
+.lists {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  line-height: 1;
+
+  // Inline
+  &--inline {
+    display: flex;
+    align-items: center;
+
+    .lists__link {
+      display: block;
+    }
+  }
+
+  // Vertical line separator
+  &--vbar {
+    .lists__item:not(:last-of-type)::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      content: "";
+      background: $brand-light-gray;
+      height: calc(100% - 1px);
+      width: 1px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.lists__item {
+  position: relative;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
