@@ -17,6 +17,7 @@
 
 @import 'vendors/include-media/include-media';
 @import 'vendors/bootstrap/crisis-cleanup-bootstrap';
+@import "vendors/perfect-scrollbar/perfect-scrollbar";
 @import 'vendors/icomoon/icomoon';
 
 /*
@@ -48,6 +49,7 @@
 
 @import "modules/menu/nav";
 @import "modules/utilities/utilities";
+@import "modules/cards/cards";
 
 /*
 ** Import partials from modules->bootstrap directory

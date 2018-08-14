@@ -5,10 +5,44 @@
 /* =============== Layout related styles ================ */
 
 .page-outer {
-  margin-right: auto;
+  position: relative;
   margin-left: auto;
   padding-top: pxToRem(108, 16);
   padding-bottom: pxToRem(104, 16);
   min-height: 100%;
-  max-width: 1280px;
+  width: calc(100% - 265px);//$side_navbar_width;
+}
+
+#main {
+  position: relative;
+  z-index: 1;
+}
+
+/* =============== Custom grid styles =================*/
+
+.row-xs {
+  margin-right: -7px;
+  margin-left: -7px;
+
+  >[class*="col-"] {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+}
+
+/* =============== Perfect scrollbar custom styles ================ */
+.ps--active-y {
+  > .ps__rail-y {
+    opacity: 1 !important;
+    background: $brand-light-gray !important;
+    width: 1px;
+  }
+
+  .ps__thumb-y {
+    right: 0;
+    opacity: 1;
+    background: $brand-gray !important;
+    border-radius: 0;
+    width: 3px !important;
+  }
 }

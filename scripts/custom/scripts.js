@@ -26,9 +26,9 @@
         var siblings = [];
         var sibling = elem.parentNode.firstChild;
         var skipMe = elem;
-        for ( ; sibling; sibling = sibling.nextSibling )
-            if ( sibling.nodeType == 1 && sibling != skipMe )
-                siblings.push( sibling );
+        for (; sibling; sibling = sibling.nextSibling)
+            if (sibling.nodeType == 1 && sibling != skipMe)
+                siblings.push(sibling);
         return siblings;
     };
 
@@ -38,13 +38,24 @@
     Array.prototype.forEach.call(d.querySelectorAll('.js-navbar-item'), function (ele) {
         ele.addEventListener('mouseenter', function () {
             ele.classList.add('is-active');
+            $(ele).find('.navbar-submenu').slideDown(300);
             _findAncestor(ele, 'navbar-nav').classList.add('is-submenu-shown');
         });
 
         ele.addEventListener('mouseleave', function () {
             ele.classList.remove('is-active');
+            $(ele).find('.navbar-submenu').slideUp(300);
             _findAncestor(ele, 'navbar-nav').classList.remove('is-submenu-shown');
         });
     });
 
+    /**
+     * Perfect scrollbar initialization
+     */
+
+    $('.js-ps-scrollbar').each(function(){
+        const ps = new PerfectScrollbar($(this)[0], {
+            suppressScrollX: true
+        });
+    });
 })(window, document, jQuery);

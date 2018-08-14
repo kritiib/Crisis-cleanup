@@ -7,7 +7,7 @@
 html {
 	font-size: 14px;
 
-	@include media(">=ls") {
+	@include media(">=ipad") {
 		font-size: 16px;
 	}
 }
@@ -56,4 +56,4 @@ a {
 }
 
 /* Web page customized selection feature */
-@include selection($secondary, $brand-white);
+@include selection($primary, $brand-white);

@@ -9,10 +9,11 @@
 
 /* =============== Sticky call to action ================ */
 
-.sticky-call-action-holder {
+.sticky-call-action-container {
   position: fixed;
   top: pxToRem(20, 16);
   right: 15px;
+  z-index: $zindex-normal + 10;
 }
 
 .sticky-call-action__btn {

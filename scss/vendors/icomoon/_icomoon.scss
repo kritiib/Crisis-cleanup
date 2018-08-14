@@ -28,6 +28,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-timer:before {
+  content: "\e924";
+}
 .icon-boot:before {
   content: "\e900";
 }

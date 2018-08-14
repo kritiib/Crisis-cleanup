@@ -1,0 +1,17 @@
+/**
+ * Feature card
+ */
+
+.feature-card {
+  position: relative;
+  padding: pxToRem(35, 16) pxToRem(30, 16) pxToRem(110, 16);
+  background: $brand-white;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.06);
+}
+
+.feature-card__footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
