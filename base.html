@@ -82,14 +82,264 @@
     </aside><!-- /.App sidebar navigation ends -->
 
     <!-- Sticky Button -->
-    <div class="sticky-call-action-holder">
+    <div class="sticky-call-action-container">
         <a href="tel:1 (800) 451-1954" class="btn btn-primary sticky-call-action__btn"><span class="text-lg"><strong>Survivors call</strong></span><strong>1 (800) 451-1954</strong></a>
     </div>
 
     <!-- App main content -->
-    <main id="main" class="main" role="main">
-        <div class="content">
+    <main class="main" id="main" role="main">
+        <div class="content" id="content">
 
+            <!-- Real Time Disaster Simulation Map Section -->
+            <div class="map-block">
+
+                <!-- Map node -->
+                <div class="map-container">
+                    <div class="map__node" id="realtimeMap"></div>
+                </div>
+
+                <!-- Map overlay content -->
+                <div class="map-overlay-content">
+                    <div class="tasks-container">
+                        <div class="tasks-container__body js-ps-scrollbar">
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                            <div class="tasks-card">
+                                <div class="tasks-card__body">
+                                    <div class="tasks-card__logo"><img class="tasks-card__img" src="contents/team-logo-rubicon.png" /> </div>
+                                    <div class="tasks-card__time">
+                                        <i class="icon icon-timer"></i>
+                                        <span>5 min ago</span>
+                                    </div>
+                                    <div class="tasks-card__title"><strong>Team Rubicon</strong></div>
+                                    <div class="tasks-card__desc">Helped over 1,200 organizations help 43,686 homes</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.Real Time Disaster Simulation Map Section ends -->
+
+            <!-- Features block -->
+            <section class="section section--features spacing-my-eq">
+                <div class="container">
+                    <div class="row row-xs">
+
+                        <div class="col-sm-4 d-flex mb-4 mb-sm-0">
+                            <article class="feature-card">
+                                <h3 class="feature-card__title"><strong>Relief Organizations</strong></h3>
+                                <div class="feature-card__body">
+                                    <p>Requirements:</p>
+                                    <dl>
+                                        <dd>Boots on the Ground</dd>
+                                        <dd>Interact directly with Survivors</dd>
+                                        <dd>Do assesments, debris removal, muck-outs, rebuilding</dd>
+                                        <dd>Be a reputable organization</dd>
+                                        <dd><a href="" class="btn-link btn-link-primary">Full details</a></dd>
+                                    </dl>
+                                </div>
+                                <footer class="feature-card__footer">
+                                    <a href="" class="btn btn-primary btn-lg has-icon right w-100">Register <i class="icon icon-right-arrow"></i></a>
+                                </footer>
+                            </article>
+                        </div>
+
+                        <div class="col-sm-4 d-flex mb-4 mb-sm-0">
+                            <article class="feature-card">
+                                <h3 class="feature-card__title"><strong>Individual Volunteer</strong></h3>
+                                <div class="feature-card__body">
+                                    <p>Please first connect with a reputable relief organization</p>
+                                </div>
+                                <footer class="feature-card__footer">
+                                    <a href="" class="btn btn-primary btn-lg has-icon right w-100">connect <i class="icon icon-right-arrow"></i></a>
+                                </footer>
+                            </article>
+                        </div>
+
+                        <div class="col-sm-4 d-flex">
+                            <article class="feature-card">
+                                <h3 class="feature-card__title"><strong>Government Agency</strong></h3>
+                                <div class="feature-card__body">
+                                    <p>Government receives appropriately limited access to help facilitate recovery</p>
+                                </div>
+                                <footer class="feature-card__footer">
+                                    <a href="" class="btn btn-primary btn-lg has-icon right w-100">Request <i class="icon icon-right-arrow"></i></a>
+                                </footer>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+            </section><!-- /.Features block ends -->
 
         </div>
     </main><!-- /.App main content ends -->
@@ -113,7 +363,11 @@
 <script src="scripts/vendors/modernizr.min.js"></script>
 <script src="scripts/vendors/jquery-3.3.1.min.js"></script>
 <script src="scripts/vendors/bootstrap.bundle.min.js"></script>
+<script src="scripts/vendors/perfect-scrollbar.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLRh36fbpwdrlS0u9ZCXctv-XJ6esLUBQ"></script>
+
 <script src="scripts/custom/scripts.js"></script>
+<script src="scripts/custom/map-script.js"></script>
 
 </body>
 </html>

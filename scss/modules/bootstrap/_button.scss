@@ -7,7 +7,7 @@
   padding: 14px 15px;
   border: 0;
   color: $brand-black;
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1;
   min-width: pxToRem(175, 16);
   text-align: center;
@@ -23,6 +23,12 @@
   &:active:focus {
     box-shadow: none !important;
     color: $brand-black !important;
+  }
+
+  // == Modifiers
+  // == Size
+  &-lg {
+    padding: pxToRem(22, 16) pxToRem(30, 16);
   }
 }
 
@@ -51,6 +57,20 @@
   }
 }
 
+// == Button has icon
+.btn.has-icon {
+  display: flex;
+  &.right {
+    text-align: left;
+
+    .icon {
+      margin-left: auto;
+      font-size: pxToRem(18, 16);
+      font-weight: bold;
+    }
+  }
+}
+
 // == Button group vertical
 .btn-group-vertical {
   position: relative;
@@ -63,5 +83,22 @@
     &:not(:last-of-type) {
       margin-bottom: pxToRem(10, 16);
     }
+  }
+}
+
+// == Button link
+.btn-link {
+  display: inline-block;
+  border-bottom: 1px solid;
+  vertical-align: top;
+}
+
+.btn-link-primary {
+  color: #f79820;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $brand-dark;
   }
 }

@@ -10,10 +10,34 @@ strong {
   font-weight: 900; // Add the correct font weight in Chrome, Edge, and Safari
 }
 
+dl, .dl {
+  padding-left: 1rem;
+  line-height: 1.3;
+
+  &:last-of-type,
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+dd, .dd {
+  margin-bottom: pxToRem(15, 16);
+
+  &:last-of-type,
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 p, blockquote {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+h3, .h3 {
+  margin-bottom: pxToRem(28, 16);
+  line-height: 1.06;
 }

@@ -48,12 +48,12 @@ $enable_line_xs: false !default;
     left: 50%;
     opacity: 1;
     margin-left: pxToRem(-15, 14);
-    background: $brand-primary;
+    background: $primary;
     border-radius: pxToRem(2, 14);
     height: 3px;
     width: 30px;
     transform: rotate(0deg);
-    @include transition(all $transition_delay_default ceaser($easeInOutSine));
+    transition: all ease 0.35s;
 
     &:nth-child(1) {
       top: 25px;

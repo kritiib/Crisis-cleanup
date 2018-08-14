@@ -17,6 +17,9 @@ $zindex-normal: 1;
 $zindex-high: 2;
 $zindex-super: 9999;
 
+// == Site layout
+$side_navbar_width: 20.703125%;
+
 /**
 * ==============================================================================
 *     Overriding bootstrap's varaibles with own brand's variables
@@ -91,6 +94,7 @@ $headings-font-weight: 600;
 $headings-font-family: $font-family-base;
 
 //** Headings small color
+$headings-color: $brand-black;
 $headings-small-color: $brand-black;
 
 //** Global textual link color.
@@ -120,7 +124,7 @@ $grid-breakpoints: (
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-xs-max-width: 1170px;
+$container-xs-max-width: 1030px;
 
 $container-max-widths: (
   xs: $container-xs-max-width,
