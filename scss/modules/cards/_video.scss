@@ -1,0 +1,86 @@
+/**
+ * Video card
+ */
+
+/* ===================== Video card ======================== */
+
+.video-card.left-pushed-70 {
+  padding-left: pxToRem(70, 16);
+}
+
+.video-card__embedded {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+
+  &::before {
+    @include make-pseudo-position(absolute, full);
+    background: linear-gradient(to bottom, $secondary 30%, $primary 100%);
+  }
+}
+
+.video-card__cover,
+.video-card__embedded-item {
+  @include make-full-position(absolute);
+  transition: all ease-in-out 0.35s;
+}
+
+.video-card__embedded-item {
+  pointer-events: none;
+  opacity: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+}
+
+.video-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: $zindex-normal;
+  display: block;
+  padding: 0 0;
+  background: none;
+  border: 0;
+  line-height: 1;
+  outline: 0;
+  transform: translateX(-50%) translateY(-50%);
+
+  .icon-play {
+    font-size: pxToRem(90, 16);
+    .path1::before,
+    .path2::before,
+    .path3::before {
+      transition: all ease 0.35s;
+    }
+  }
+
+  &:hover {
+    .icon-play {
+      .path1:before {
+        color: $secondary;
+      }
+
+      .path3:before {
+        border-color: $secondary;
+      }
+    }
+  }
+}
+
+// == Is video playing
+.video-card__embedded.is-video-playing {
+  .video-card__cover,
+  .video-card__play {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .video-card__embedded-item {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+}

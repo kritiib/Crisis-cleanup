@@ -77,10 +77,14 @@
   content: "\e90d";
 }
 .icon-play .path1:before {
+  position: relative;
+  z-index: 1;
   content: "\e90e";
   color: rgb(254, 206, 9);
 }
 .icon-play .path2:before {
+  position: relative;
+  z-index: 2;
   content: "\e90f";
   margin-left: -1em;
   color: rgb(53, 53, 53);
@@ -88,7 +92,9 @@
 .icon-play .path3:before {
   content: "\e910";
   margin-left: -1em;
-  color: none;
+  border: 1px solid rgb(254, 206, 9);
+  border-radius: 50%;
+  color: transparent;
   opacity: 0.6;
 }
 .icon-play-hover .path1:before {

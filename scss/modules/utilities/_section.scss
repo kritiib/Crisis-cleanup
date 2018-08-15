@@ -2,9 +2,49 @@
  * Reusable sections
  */
 
-/* ==================== Section spacing ======================*/
+/* ==================== Section spacing ====================== */
 
 .spacing-my-eq {
   margin-top: pxToRem(80, 16);
   margin-bottom: pxToRem(80, 16);
+}
+
+.spacing-my-lg {
+  margin-top: pxToRem(105, 16);
+  margin-bottom: pxToRem(105, 16);
+}
+
+.spacing-my-xlg {
+  margin-top: pxToRem(155, 16);
+  margin-bottom: pxToRem(155, 16);
+}
+
+
+/* ==================== Text container ====================== */
+
+.text-container {
+  max-width: pxToRem(550, 16);
+}
+
+/* ==================== Section module ====================== */
+
+.section__container {
+  padding-left: pxToRem(90, 16);
+}
+
+.section__header {
+  margin-bottom: pxToRem(50, 16);
+}
+
+.section__title {
+  margin-bottom: pxToRem(50, 16);
+}
+
+.section__title--sm {
+  margin-bottom: pxToRem(15, 16);
+}
+
+.section__subtitle {
+  font-weight: 500;
+  line-height: 1.73;
 }

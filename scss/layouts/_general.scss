@@ -55,5 +55,9 @@ a {
 	}
 }
 
+[role="button"] {
+  cursor: pointer;
+}
+
 /* Web page customized selection feature */
 @include selection($primary, $brand-white);

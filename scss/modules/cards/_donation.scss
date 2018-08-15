@@ -1,0 +1,113 @@
+/**
+ * Video card
+ */
+
+/* ===================== Donation card ======================== */
+
+.donation-card-container {
+  display: flex;
+  flex-shrink: 0;
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.donation-card-col {
+  padding-right: 8px;
+  padding-left: 8px;
+  flex: 1 1 15.25%;
+  max-width: 15.25%;
+
+  &--lg {
+    flex: 1 1 auto;
+    max-width: inherit;
+
+    .fancy-input__label {
+      font-size: 1rem;
+    }
+  }
+}
+
+.donation-card {
+  border: 1px solid $border-color;
+  width: 100%;
+
+  .fancy-input__label {
+    width: 100%;
+  }
+}
+
+/* ==================== Fancy input =========================== */
+
+.fancy-input {
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.fancy-input__label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: pxToRem(22.5, 16) pxToRem(15, 16) pxToRem(22.5, 16) pxToRem(45, 16);
+  font-size: pxToRem(20, 16);
+  font-weight: 500;
+  line-height: 1;
+  vertical-align: top;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: pxToRem(15, 16);
+    content: "";
+    display: inline-block;
+    border: 2px solid;
+    height: 20px;
+    width: 20px;
+    transform: translateY(-50%);
+    transition: all ease-in-out 0.35s;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: pxToRem(21, 16);
+    opacity: 0;
+    content: "";
+    margin-top: 0.05rem;
+    border: 3px solid $brand-dark;
+    border-radius: 50%;
+    transform: translateY(-50%) scale(0);
+    transition: all ease-in-out 0.35s;
+  }
+}
+
+input[type="radio"] {
+  + .fancy-input__label {
+    &::before {
+      background-color: $brand-white;
+      border: 1px solid #adadad;
+      border-radius: 50%;
+    }
+
+    &::after {
+      top: 50%;
+      margin-top: 0;
+      border-width: 4px;
+    }
+  }
+
+  &:checked + .fancy-input__label {
+    background: $brand-dark;
+    color: $brand-white;
+
+    &::before {
+      background-color: $brand-white;
+      border-color: $brand-dark;
+    }
+
+    &::after {
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
+  }
+}

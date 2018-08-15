@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r assets/css/style.css",
-    "scss": "node-sass --source-map true --output-style compressed -o assets/css scss",
-    "watch:scss": "node-sass -w scss --source-map true --output-style compressed -o assets/css scss",
+    "scss": "node-sass --source-map true --precision 8 --output-style compressed -o assets/css scss",
+    "watch:scss": "node-sass -w scss --source-map true --precision 8 --output-style compressed -o assets/css scss",
     "serve": "browser-sync start --proxy \"http://bob.local.com/crisis-cleanup\" --files \"assets/css/*.css\"",
     "build:all": "npm run scss && npm run autoprefixer",
     "watch:all": "parallelshell \"npm run serve\" \"npm run watch:scss\""
