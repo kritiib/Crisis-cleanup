@@ -23,7 +23,13 @@
 /* ==================== Text container ====================== */
 
 .text-container {
+  margin-right: auto;
+  margin-left: auto;
   max-width: pxToRem(550, 16);
+}
+
+.text-container--xs {
+  max-width: pxToRem(300, 16);
 }
 
 /* ==================== Section module ====================== */
@@ -33,7 +39,7 @@
 }
 
 .section__header {
-  margin-bottom: pxToRem(50, 16);
+  margin-bottom: pxToRem(45, 16);
 }
 
 .section__title {

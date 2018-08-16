@@ -1,0 +1,94 @@
+/**
+ * Roadmap card
+ */
+
+/* ===================== Roadmap card ======================== */
+
+.roadmap-card-container--pushed-right {
+  position: relative;
+  margin-bottom: pxToRem(85, 16);
+  padding-left: pxToRem(50, 16);
+}
+
+.single-slider-parent {
+  position: relative;
+  .slider-controls.right-top {
+    top: pxToRem(-100, 16);
+  }
+
+  &::before {
+    @include make-pseudo-position(absolute, full);
+    right: auto;
+    z-index: $zindex-normal + 1;
+    pointer-events: none;
+    width: pxToRem(345, 16);
+    background-image: linear-gradient(to right, rgba(247, 247, 247, 0), rgba(247, 247, 247, 0.3) 49%, rgba(247, 247, 247, 0.87) 76%, #f7f7f7);
+    transform: rotate(-180deg);
+    transition: all ease-in-out 0.5s;
+  }
+}
+
+.roadmap-card {
+  position: relative;
+  flex-grow: 1;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.06);
+}
+
+.roadmap-card .picto-container {
+  margin-bottom: pxToRem(12, 16);
+}
+
+.roadmap-card__body {
+  padding: pxToRem(27, 16) pxToRem(20, 16) pxToRem(66, 16);
+  color: $brand-black;
+}
+
+.roadmap-card__footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// == Road map grid
+
+.rowdmap-card-col:not(.is-last-col) {
+  margin-bottom: pxToRem(155, 16);
+}
+
+// == Road map timeline
+
+.roadmap-card-container {
+  .single-slider-item {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      content: attr(data-before-year);
+      background: $brand-dark;
+      color: $brand-white;
+      font-weight: 600;
+      height: 15px;
+      width: 100% - 44.08212560386474%;
+      line-height: 1;
+      text-align: center;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      right: 0;
+      content: attr(data-after-year);
+      background: $brand-black;
+      width: 44.08212560386474%;
+    }
+
+    &.is-current-year {
+      &::after {
+        height: 25px;
+        line-height: inherit;
+      }
+    }
+  }
+}

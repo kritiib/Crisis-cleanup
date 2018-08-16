@@ -1,0 +1,14 @@
+/**
+ * Icons style rules
+ */
+
+/* ===================== Icons with different sizes =================== */
+
+$icon_size_prefix_list: xs sm md lg xlg;
+$icon_size_val_list: 10 14 20 30 50;
+
+@for $i from 1 through length($icon_size_prefix_list) {
+  .icon-#{nth($icon_size_prefix_list, $i)} {
+    font-size: pxToRem(nth($icon_size_val_list, $i), 16);
+  }
+}

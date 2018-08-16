@@ -1,0 +1,41 @@
+/**
+ * 3rd-party swiper library customization
+ */
+
+/* ==================== Swiper customization =================== */
+
+.swiper-container {
+  //opacity: 0;
+  //visibility: hidden;
+  //transition: opacity ease-in-out 0.5s;
+  //
+  //&.swiper-initialized {
+  //  opacity: 1;
+  //  visibility: visible;
+  //}
+}
+
+.swiper-slide.single-slider-item {
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.5s;
+
+  &.swiper-slide-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// == Disable swiper when there is only one slide
+
+.swiper-container.swiper-disabled {
+  .swiper-wrapper {
+    transform: none !important;
+  }
+}
+
+// == Swiper controls
+
+.swiper-button-disabled {
+  @extend .btn-disabled !optional;
+}

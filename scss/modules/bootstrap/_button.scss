@@ -2,9 +2,11 @@
 * Bootstrap overrides button scss file
 */
 
+/* =============== Custom buttons ================ */
+
 .btn {
   display: inline-block;
-  padding: 14px 15px;
+  padding: pxToRem(15, 16) pxToRem(15, 16);
   border: 0;
   color: $brand-black;
   font-weight: 900;
@@ -27,15 +29,29 @@
 
   // == Modifiers
   // == Size
+
+  &-sm {
+    padding: pxToRem(12, 16) pxToRem(12, 16);
+  }
+
   &-lg {
-    padding: pxToRem(22, 16) pxToRem(30, 16);
+    padding: pxToRem(20, 16) pxToRem(30, 16);
+  }
+
+  // == States
+  &.btn-disabled {
+    background: $disabled-bg-color;
+    border-color: $disabled-bg-color;
+    color: $disabled-color;
   }
 }
 
 .btn-primary {
   background: $primary;
+  border: 2px solid $primary;
   &:hover {
-    background: $secondary !important;
+    background: $secondary;
+    border: 2px solid $secondary;
   }
 }
 
@@ -57,9 +73,32 @@
   }
 }
 
+// == Inverse button
+.btn-inverse-secondary {
+  background: $brand-dark;
+  border: 2px solid $brand-dark;
+  color: $primary;
+
+  &:hover {
+    background: transparent;
+    color: $brand-dark;
+  }
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    background: transparent;
+    color: $brand-dark;
+  }
+}
+
 // == Button has icon
 .btn.has-icon {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
+  min-width: inherit;
+  vertical-align: middle;
+
   &.right {
     text-align: left;
 
@@ -68,6 +107,16 @@
       font-size: pxToRem(18, 16);
       font-weight: bold;
     }
+  }
+}
+
+// == Button group
+.btn-group {
+  display: flex;
+  align-items: center;
+
+  .btn:not(:last-of-type) {
+    margin-right: pxToRem(15, 16);
   }
 }
 

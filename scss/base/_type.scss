@@ -37,7 +37,16 @@ p, blockquote {
   }
 }
 
+h2, .h2 {
+  margin-bottom: pxToRem(33, 16);
+  line-height: 1.25;
+}
+
 h3, .h3 {
   margin-bottom: pxToRem(28, 16);
   line-height: 1.06;
+}
+
+.text-size-md {
+  font-size: pxToRem(18, 16);
 }

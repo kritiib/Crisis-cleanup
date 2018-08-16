@@ -55,7 +55,9 @@ a {
 	}
 }
 
-[role="button"] {
+[role="button"],
+[type="submit"],
+[type="button"] {
   cursor: pointer;
 }
 

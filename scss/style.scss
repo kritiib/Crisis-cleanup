@@ -17,8 +17,9 @@
 
 @import 'vendors/include-media/include-media';
 @import 'vendors/bootstrap/crisis-cleanup-bootstrap';
-@import "vendors/perfect-scrollbar/perfect-scrollbar";
 @import 'vendors/icomoon/icomoon';
+@import "vendors/perfect-scrollbar/perfect-scrollbar";
+@import "vendors/swiper/swiper";
 
 /*
 ** Import partials from base directory
@@ -56,3 +57,9 @@
 */
 
 @import "modules/bootstrap/bootstrap-overrides";
+
+/*
+** Import partials from modules->overrides directory
+*/
+
+@import "modules/overrides/overrides";

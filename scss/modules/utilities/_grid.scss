@@ -1,0 +1,25 @@
+/**
+ * Custom grid
+ */
+
+/* =============== Custom grid styles =================*/
+
+.row-xs {
+  margin-right: -7px;
+  margin-left: -7px;
+
+  >[class*="col-"] {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+}
+
+.row-md {
+  margin-right: -22px;
+  margin-left: -22px;
+
+  >[class*="col-"] {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+}
