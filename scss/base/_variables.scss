@@ -44,6 +44,10 @@ $brand-light-gray: #7d7d7d;
 $brand-faded: #fafafa;
 $brand-dark-faded: #F7F7F7;
 $border-color: #e0e0e0;
+$disabled-bg-color: #d7d7d7;
+$disabled-color: #747474;
+
+$gray-800: $brand-black;
 
 //== Scaffolding
 //
@@ -213,7 +217,26 @@ $tooltip-arrow-color: #000000;
 
 $shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.25);
 
-$spacer: 1.5rem;
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+$spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+(
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 2.75)
+),
+$spacers
+);
 
 
 // Options

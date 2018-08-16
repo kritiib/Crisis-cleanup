@@ -18,18 +18,6 @@
   z-index: 1;
 }
 
-/* =============== Custom grid styles =================*/
-
-.row-xs {
-  margin-right: -7px;
-  margin-left: -7px;
-
-  >[class*="col-"] {
-    padding-right: 7px;
-    padding-left: 7px;
-  }
-}
-
 /* =============== Perfect scrollbar custom styles ================ */
 .ps--active-y {
   > .ps__rail-y {

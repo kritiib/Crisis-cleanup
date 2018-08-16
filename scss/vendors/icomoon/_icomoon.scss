@@ -1,3 +1,4 @@
+
 /**
  * Icomoon library
  */
@@ -28,6 +29,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-left-arrow:before {
+  content: "\e928";
+}
+.icon-critical-needs:before {
+  content: "\e925";
+}
+.icon-heavy-equipment:before {
+  content: "\e926";
+}
+.icon-tool-integration:before {
+  content: "\e927";
+}
 .icon-timer:before {
   content: "\e924";
 }

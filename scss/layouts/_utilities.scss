@@ -2,17 +2,17 @@
 
 // Remove arrow from select in IE
 select::-ms-expand {
-    display: none;
+  display: none;
 }
 
 // Shadow
 .is-shadowed {
-	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.01), 0 5px 32px 10px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.01), 0 5px 32px 10px rgba(0, 0, 0, 0.05);
 }
 
 // overflow
 .overflow-visible {
-	overflow: visible !important;
+  overflow: visible !important;
 }
 
 .overflow-hidden {
@@ -21,17 +21,17 @@ select::-ms-expand {
 
 /* Link overlay style */
 .link-stacked {
-	&::before {
-		@include make-full-position(absolute);
-		z-index: $zindex-normal;
-	}
+  &::before {
+    @include make-full-position(absolute);
+    z-index: $zindex-normal;
+  }
 }
 
 // Off css transition if window is resizing
 .resize-active {
-	* {
-		transition: none !important;
-	}
+  * {
+    transition: none !important;
+  }
 }
 
 // Enable debuggin mode in development environment
@@ -39,54 +39,61 @@ select::-ms-expand {
 
 // == Is floated element
 .is-floated {
-	position: absolute !important;
-	left: 0;
-	right: 0;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
 
-	&.center {
-		top: 50%;
-		left: 50%;
-		// right: auto;
-		transform: translateX(-50%) translateY(-50%);
-	}
+  &.center {
+    top: 50%;
+    left: 50%;
+    // right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
 
-	&.right {
-		top: 1.389rem;
-		right: 1.071rem;
-		left: auto;
-		@include media(">=ipad") {
-			top: 2.778rem;
-			right: 1.944rem;
-		}
-	}
+  &.top {
+    top: 0;
+  }
 
-	&.bottom {
-		bottom: 1.25rem;
-	}
+  &.right {
+    right: 0;
+    left: auto;
+  }
 
-	&.left-bottom {
-		left: 0;
-		bottom: 0;
-		right: auto;
-	}
+  &.bottom {
+    bottom: 0;
+  }
 
-	&.right-bottom {
-		right: 0;
-		bottom: 0;
-		left: auto;
-	}
+  &.left-bottom {
+    left: 0;
+    bottom: 0;
+    right: auto;
+  }
 
-	&.center-bottom {
-		bottom: 0;		
-		left: 50%;
-		transform: translateX(-50%);
-	}
+  &.right-top {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+  }
+
+  &.right-bottom {
+    right: 0;
+    bottom: 0;
+    left: auto;
+  }
+
+  &.center-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .is-sm-floated {
-	@include media(">sm") {
-		position: absolute !important;
-		left: 0;
-		right: 0;
-	}
+  @include media(">sm") {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+  }
 }
