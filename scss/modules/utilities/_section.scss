@@ -54,3 +54,19 @@
   font-weight: 500;
   line-height: 1.73;
 }
+
+/* ==================== Sub section module ====================== */
+
+.sub-section {
+  &:not(:last-of-type) {
+    margin-bottom: pxToRem(110, 16);
+  }
+}
+
+.sub-section__header {
+  margin-bottom: pxToRem(50, 16);
+}
+
+.sub-section__title {
+  margin-bottom: pxToRem(30, 16);
+}

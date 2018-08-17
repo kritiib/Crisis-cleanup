@@ -38,6 +38,11 @@
     padding: pxToRem(20, 16) pxToRem(30, 16);
   }
 
+  &-w-140 {
+    width: pxToRem(140, 16);
+    min-width: inherit;
+  }
+
   // == States
   &.btn-disabled {
     background: $disabled-bg-color;
@@ -74,6 +79,24 @@
 }
 
 // == Inverse button
+.btn-inverse-primary {
+  background: $primary;
+  border: 2px solid $primary;
+  color: $brand-dark;
+
+  &:hover {
+    background: transparent;
+    color: $brand-dark;
+  }
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    background: transparent;
+    color: $brand-dark;
+  }
+}
+
 .btn-inverse-secondary {
   background: $brand-dark;
   border: 2px solid $brand-dark;
@@ -88,6 +111,47 @@
   &:active,
   &:active:focus {
     background: transparent;
+    color: $brand-dark;
+  }
+}
+
+// == Multicolor button
+.btn-multicolor-primary {
+  background: $primary;
+  border: 2px solid $primary;
+  color: $primary;
+
+  &:hover {
+    background: $brand-dark;
+    border-color: $brand-dark;
+    color: $primary;
+  }
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    background: $brand-dark;
+    border-color: $brand-dark;
+    color: $primary;
+  }
+}
+
+.btn-multicolor-secondary {
+  background: $brand-dark;
+  border: 2px solid $brand-dark;
+  color: $primary;
+
+  &:hover {
+    background: $primary;
+    border-color: $primary;
+    color: $brand-dark;
+  }
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    background: $primary;
+    border-color: $primary;
     color: $brand-dark;
   }
 }

@@ -14,6 +14,16 @@
   }
 }
 
+.row-sm {
+  margin-right: -12px;
+  margin-left: -12px;
+
+  >[class*="col-"] {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
 .row-md {
   margin-right: -22px;
   margin-left: -22px;

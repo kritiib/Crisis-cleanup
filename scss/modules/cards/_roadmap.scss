@@ -52,7 +52,7 @@
 
 // == Road map grid
 
-.rowdmap-card-col:not(.is-last-col) {
+.roadmap-card-col:not(.is-last-col) {
   margin-bottom: pxToRem(155, 16);
 }
 
@@ -67,6 +67,7 @@
       position: absolute;
       top: 50%;
       content: attr(data-before-year);
+      margin-top: pxToRem(10, 16);
       background: $brand-dark;
       color: $brand-white;
       font-weight: 600;
@@ -88,6 +89,40 @@
       &::after {
         height: 25px;
         line-height: inherit;
+      }
+    }
+  }
+}
+
+// == Add lines
+.single-slider {
+  .roadmap-card {
+    &::after {
+      position: absolute;
+      bottom: pxToRem(-70, 16);
+      left: 50%;
+      content: "";
+      margin-left: pxToRem(-0.5, 16);
+      border-right: 1px solid;
+      height: pxToRem(70, 16);
+    }
+  }
+
+  .roadmap-card-col {
+    &:nth-of-type(n+4) {
+      .roadmap-card {
+        &::after {
+          top: pxToRem(-72, 16);
+          bottom: auto;
+        }
+      }
+    }
+
+    &:nth-of-type(4) {
+      .roadmap-card {
+        &::after {
+          left: calc(50% - -25px);
+        }
       }
     }
   }
