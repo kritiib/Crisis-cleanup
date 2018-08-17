@@ -1,0 +1,11 @@
+/**
+ * Promotions card
+ */
+
+/* ===================== Promotions card ======================== */
+
+.promotions-col {
+  &:not(.is-last-col) {
+    margin-bottom: pxToRem(65, 16);
+  }
+}

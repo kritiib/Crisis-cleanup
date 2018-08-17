@@ -1,0 +1,63 @@
+/**
+ * Staffs card
+ */
+
+/* ===================== Staffs card ======================== */
+
+.staff-card-container {
+  margin-bottom: pxToRem(53, 16);
+}
+
+.staffs-carousel-parent {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: $zindex-normal + 1;
+    pointer-events: none;
+    content: "";
+    background-image: linear-gradient(to left, rgba(247, 247, 247, 0), rgba(247, 247, 247, 0.85) 72%, rgba(247, 247, 247, 0.97) 87%, #f7f7f7);
+    height: pxToRem(164, 16);
+    width: pxToRem(125, 16);
+  }
+
+  &::after {
+    right: 0;
+    left: auto;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.85) 70%, rgba(255, 255, 255, 0.97) 87%, #ffffff);
+    transform: rotate(-180deg);
+  }
+
+  // == Swiper component
+  .swiper-container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .slider-controls {
+    top: pxToRem(-90, 16);
+  }
+}
+
+.staff-card {
+  position: relative;
+  background: $brand-white;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.15);
+  color: $brand-gray;
+  font-size: 14px;
+}
+
+.staff-card__body {
+  padding: pxToRem(18, 16) pxToRem(15, 16);
+}
+
+.staff-card__picture-caption {
+  padding: pxToRem(18, 16) pxToRem(15, 16);
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+}

@@ -14,7 +14,7 @@
  */
 
 // Wrap javascript code inside a clouser to avoid possible conflicts with other codes
-;(function($) {
+;(function ($) {
     // == Enable strict mode using use-strict directive
     "use strict";
 
@@ -22,9 +22,9 @@
     initSingleSlideSlider($('.js-single-slider'));
 
     function initSingleSlideSlider(_node) {
-        if(typeof _node === 'undefined') return;
+        if (typeof _node === 'undefined') return;
 
-        _node.each(function() {
+        _node.each(function () {
             var $self = $(this);
 
             var counterSwiper = new Swiper($self, {
@@ -55,7 +55,7 @@
 
                         var yearArray = [];
 
-                        this.slides.each(function(e) {
+                        this.slides.each(function (e) {
                             var self = this;
                             var prevDate = self.getAttribute('data-before-year');
                             var nextDate = self.getAttribute('data-after-year');
@@ -63,14 +63,64 @@
                             Array.prototype.push.apply(yearArray, [prevDate, nextDate]);
                         });
 
-                        if (yearArray.indexOf(''+currentYear+'') !== -1) {
-                            this.slides.each(function(e) {
+                        if (yearArray.indexOf('' + currentYear + '') !== -1) {
+                            this.slides.each(function (e) {
                                 var self = $(this);
-                                self.filter('[data-before-year='+ currentYear +']').addClass('is-current-year');
-                                self.filter('[data-after-year='+ currentYear +']').addClass('is-current-year');
+                                self.filter('[data-before-year=' + currentYear + ']').addClass('is-current-year');
+                                self.filter('[data-after-year=' + currentYear + ']').addClass('is-current-year');
                             });
                         }
                     },
+                },
+            });
+        });
+    }
+
+    // == Helper function to add classes to all visible slides on carousel
+    function _getVisibleSlidesOnCarousel(_this) {
+        var indexLeft = _this.realIndex; //Index number of left slide per view in loop mode
+        var indexRight = _this.realIndex + _this.params.slidesPerView; //Index number of right slide per view in loop mode
+
+        Array.prototype.forEach.call(document.querySelectorAll('.js-staffs-carousel-parent .swiper-slide'), function (e) {
+            e.classList.remove('is-active-carousel-slide');
+        });
+
+        $(_this.$el[0]).find('.swiper-slide').slice(indexLeft, indexRight).addClass('is-active-carousel-slide');
+    }
+
+    // == Build staffs carousel
+    initStaffCarousel($('.js-staffs-carousel'));
+
+    function initStaffCarousel(_node) {
+        if (typeof _node === 'undefined') return;
+
+        _node.each(function () {
+            var $self = $(this);
+
+            var staffCarousel = new Swiper($self, {
+                autoplay: false,
+                navigation: {
+                    nextEl: $self.closest('.js-staffs-carousel-parent').find('.js-carousel-next-button'),
+                    prevEl: $self.closest('.js-staffs-carousel-parent').find('.js-carousel-prev-button'),
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    type: 'bullets',
+                },
+                speed: 500,
+                slidesPerView: 6,
+                slidesPerGroup: 6,
+                spaceBetween: 20,
+                on: {
+                    init: function () {
+                        // == Add class after the initialization of swiper
+                        this.$el[0].classList.add('swiper-initialized');
+                        _getVisibleSlidesOnCarousel(this);
+                    },
+                    slideChange: function () {
+                        _getVisibleSlidesOnCarousel(this);
+                    }
                 },
             });
         });
